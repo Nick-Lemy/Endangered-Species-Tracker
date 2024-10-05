@@ -2,7 +2,7 @@ import requests
 from decouple import config
 
 
-API_KEY = config("IUCN_API_KEY")
+API_KEY = config("IUCN_API_KEY", default="")
 
 
 def fetch_data(endpoint, params=None):
